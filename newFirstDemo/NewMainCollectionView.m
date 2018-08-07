@@ -31,10 +31,9 @@ static NSString *const footerId = @"footerId";
     flowLayout.scrollDirection=UICollectionViewScrollDirectionVertical;
     self=[super initWithFrame:frame collectionViewLayout:flowLayout];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor cyanColor];
         self.dataSource=self;
         self.delegate=self;
-//        self.contentInset=UIEdgeInsetsMake(0, 15, 0, 15);
         [self registerClass:[NewMainHeaderCollectionViewCell class] forCellWithReuseIdentifier:cellHeaderId];
         [self registerClass:[SetCollectionViewCell class] forCellWithReuseIdentifier:cellId];
         [self registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerId];
@@ -90,9 +89,9 @@ static NSString *const footerId = @"footerId";
         if (headerView == nil) {
             headerView = [[UICollectionReusableView alloc]init];
         }
-        headerView.backgroundColor = [UIColor grayColor];
-           
-        NewMainSectionHeaderView *sectionHeaderView = [[NewMainSectionHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, KHFloat(40))];
+//        headerView.backgroundColor = [UIColor grayColor];
+        
+        NewMainSectionHeaderView *sectionHeaderView = [[NewMainSectionHeaderView alloc] initWithFrame:CGRectMake(KWFloat(15), 0, ScreenWidth - 2 * KWFloat(15), KHFloat(40))];
         NSArray *arr = [FilterConditionModel getNeedSignStrFrom:self.dataDic isGetKey:YES];
         sectionHeaderView.title = arr[indexPath.section - 1];
         sectionHeaderView.layer.cornerRadius = 5;
@@ -122,12 +121,12 @@ static NSString *const footerId = @"footerId";
         
         return CGSizeMake(ScreenWidth, 141*KWidth_ScaleH);
     }
-    return CGSizeMake((self.frame.size.width-3.0)/4, 123);
+    return CGSizeMake((self.frame.size.width-3.0-30)/4, 123);
 }
 
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(0, 0, 0, 0);
+    return UIEdgeInsetsMake(0, 15, 0, 15);
 }
 
 //设置页头高度
@@ -137,7 +136,7 @@ static NSString *const footerId = @"footerId";
         
         return CGSizeMake(0, 0);
     }
-    return CGSizeMake(ScreenWidth, KHFloat(40));
+    return CGSizeMake(ScreenWidth - 2 * KWFloat(15), KHFloat(40));
 }
 #pragma mark ViewDelegate
 
