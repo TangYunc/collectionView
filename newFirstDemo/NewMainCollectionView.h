@@ -16,6 +16,7 @@
 @interface NewMainCollectionView : UICollectionView<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate>
 
 @property (nonatomic, strong) id <NewMainCollectionViewDelegate> theNewMainDelegate;
+@property (nonatomic, strong) NSDictionary *sliderDataDic;
 @property (nonatomic, strong) NSDictionary *dataDic;
 
 @end

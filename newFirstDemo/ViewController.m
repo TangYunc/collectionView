@@ -51,6 +51,12 @@
                            @"禁毒支援":  @[@"禁毒相关", @"禁毒法规"],
                            @"数据管理":  @[@"管控信息", @"统计表格", @"重点查控" ,@"病残统计", @"出所概况"]};
      */
+    
+    NSDictionary *cycleScrollDataDic = @{
+                                         @"imageArray": @[@"http://www.nncc626.com/2018-06/06/c_129887579.htm",@"http://toupiao.www.gov.cn/100dudian/index.htm",@"http://www.nncc626.com/2018-05/10/c_129869171.htm",@"http://www.nncc626.com/2018-05/23/c_129879005.htm",@"http://www.nncc626.com/2018-05/30/c_129882973.htm"],
+                                         @"titleArray": @[@"第二届中新禁毒合作双边会议在京举行",@"群众办事百项堵点疏解行动",@"第二届中菲禁毒合作双边会在杭州举行",@"大湄公河次区域禁毒合作谅解备忘录签约国会议召开",@"赵克志：坚决打赢新时代禁毒人民战争"],
+                                         @"sliderUrlArray": @[@"http://www.nncc626.com/2018-06/06/c_129887579.htm",@"http://toupiao.www.gov.cn/100dudian/index.htm",@"http://www.nncc626.com/2018-05/10/c_129869171.htm",@"http://www.nncc626.com/2018-05/23/c_129879005.htm",@"http://www.nncc626.com/2018-05/30/c_129882973.htm"]};
+    _newMainCollectionView.sliderDataDic = cycleScrollDataDic;
     _newMainCollectionView.dataDic = [vauleKeytion copy];
     [_newMainCollectionView reloadData];
 //    _newMainTabelView.dataDic = [vauleKeytion copy];

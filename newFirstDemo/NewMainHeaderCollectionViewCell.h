@@ -10,4 +10,5 @@
 
 @interface NewMainHeaderCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, strong) NSDictionary *sliderDataDic;
 @end

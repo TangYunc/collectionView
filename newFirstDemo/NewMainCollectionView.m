@@ -16,6 +16,11 @@ static NSString *const cellId = @"cellId";
 static NSString *const headerId = @"headerId";
 static NSString *const footerId = @"footerId";
 
+@interface NewMainCollectionView ()
+
+@property (assign, nonatomic)int heights;
+
+@end
 
 @implementation NewMainCollectionView
 
@@ -38,7 +43,7 @@ static NSString *const footerId = @"footerId";
         [self registerClass:[SetCollectionViewCell class] forCellWithReuseIdentifier:cellId];
         [self registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerId];
         [self registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerId];
-//        self.scrollEnabled = NO;
+        self.heights = iPhoneX? 120:49;
     
     }
     return self;
@@ -66,7 +71,7 @@ static NSString *const footerId = @"footerId";
         NewMainHeaderCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellHeaderId forIndexPath:indexPath];
         cell.backgroundColor = [UIColor redColor];
         
-        
+        cell.sliderDataDic = self.sliderDataDic;
         [cell setNeedsLayout];
         return cell;
     }
@@ -89,7 +94,6 @@ static NSString *const footerId = @"footerId";
         if (headerView == nil) {
             headerView = [[UICollectionReusableView alloc]init];
         }
-//        headerView.backgroundColor = [UIColor grayColor];
         
         NewMainSectionHeaderView *sectionHeaderView = [[NewMainSectionHeaderView alloc] initWithFrame:CGRectMake(KWFloat(15), 0, ScreenWidth - 2 * KWFloat(15), KHFloat(40))];
         NSArray *arr = [FilterConditionModel getNeedSignStrFrom:self.dataDic isGetKey:YES];
@@ -119,14 +123,14 @@ static NSString *const footerId = @"footerId";
 {
     if (indexPath.section == 0){
         
-        return CGSizeMake(ScreenWidth, 141*KWidth_ScaleH);
+        return CGSizeMake(ScreenWidth, ScreenHeight - NAVIGATION_BAR_HEIGHT -self.heights - ScreenWidth);
     }
-    return CGSizeMake((self.frame.size.width-3.0-30)/4, 123);
+    return CGSizeMake((self.frame.size.width-3.0-KWFloat(15)*2)/4, 123);
 }
 
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(0, 15, 0, 15);
+    return UIEdgeInsetsMake(0, KWFloat(15), 0, KWFloat(15));
 }
 
 //设置页头高度
