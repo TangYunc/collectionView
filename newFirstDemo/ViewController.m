@@ -27,12 +27,35 @@
     [super viewDidLoad];
 
     [self demo2];
-    
+//    [self demo3];
     
 }
+- (void)demo3{
+    //UICollectionView
+    [self setUpU3];
+    [self setDat3];
+}
+
 - (void)demo2{
+    //UITableView(cell---->UICollectionView)
     [self setUpUI];
     [self setData];
+}
+
+- (void)setDat3{
+    
+    NSMutableDictionary *vauleKeytion = [NSMutableDictionary dictionary];
+    [vauleKeytion setObject:[NSDictionary dictionaryWithObject:[NSArray arrayWithObjects:@"消息提醒", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理",nil] forKey:@"我的应用"] forKey:@"1"];
+    [vauleKeytion setObject:[NSDictionary dictionaryWithObject:[NSArray arrayWithObjects:@"禁毒相关", @"禁毒法规",nil] forKey:@"禁毒支援"] forKey:@"3"];
+    [vauleKeytion setObject:[NSDictionary dictionaryWithObject:[NSArray arrayWithObjects:@"管控信息", @"统计表格", @"重点查控" ,@"病残统计", @"出所概况",nil] forKey:@"数据管理"] forKey:@"2"];
+    
+    NSDictionary *cycleScrollDataDic = @{
+                                         @"imageArray": @[@"http://www.nncc626.com/titlepic/112294/1122943241_1528245671976_title0h.jpg",@"http://www.nncc626.com/titlepic/112288/1122888920_1527237834957_title0h.png",@"http://www.nncc626.com/titlepic/112281/1122813723_1526001294417_title0h.jpg",@"http://www.nncc626.com/titlepic/112287/1122875874_1527060493168_title0h.jpg",@"http://www.nncc626.com/titlepic/112290/1122908881_1527640910969_title0h.jpg"],
+                                         @"titleArray": @[@"第二届中新禁毒合作双边会议在京举行",@"群众办事百项堵点疏解行动",@"第二届中菲禁毒合作双边会在杭州举行",@"大湄公河次区域禁毒合作谅解备忘录签约国会议召开",@"赵克志：坚决打赢新时代禁毒人民战争"],
+                                         @"sliderUrlArray": @[@"http://www.nncc626.com/2018-06/06/c_129887579.htm",@"http://toupiao.www.gov.cn/100dudian/index.htm",@"http://www.nncc626.com/2018-05/10/c_129869171.htm",@"http://www.nncc626.com/2018-05/23/c_129879005.htm",@"http://www.nncc626.com/2018-05/30/c_129882973.htm"]};
+    _newMainCollectionView.sliderDataDic = cycleScrollDataDic;
+    _newMainCollectionView.dataDic = [vauleKeytion copy];
+    [_newMainCollectionView reloadData];
 }
 
 - (void)setData{
@@ -41,6 +64,9 @@
     [vauleKeytion setObject:[NSDictionary dictionaryWithObject:[NSArray arrayWithObjects:@"消息提醒", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理",nil] forKey:@"我的应用"] forKey:@"1"];
     [vauleKeytion setObject:[NSDictionary dictionaryWithObject:[NSArray arrayWithObjects:@"禁毒相关", @"禁毒法规",nil] forKey:@"禁毒支援"] forKey:@"3"];
     [vauleKeytion setObject:[NSDictionary dictionaryWithObject:[NSArray arrayWithObjects:@"管控信息", @"统计表格", @"重点查控" ,@"病残统计", @"出所概况",nil] forKey:@"数据管理"] forKey:@"2"];
+    [vauleKeytion setObject:[NSDictionary dictionaryWithObject:[NSArray arrayWithObjects:@"禁毒相关", @"禁毒法规",nil] forKey:@"拉阿拉蕾"] forKey:@"4"];
+    [vauleKeytion setObject:[NSDictionary dictionaryWithObject:[NSArray arrayWithObjects:@"禁毒相关", @"禁毒法规",nil] forKey:@"噜噜噜噜"] forKey:@"5"];
+    [vauleKeytion setObject:[NSDictionary dictionaryWithObject:[NSArray arrayWithObjects:@"禁毒相关", @"禁毒法规",nil] forKey:@"哈哈哈哈"] forKey:@"6"];
     /*
     [vauleKeytion addEntriesFromDictionary:[NSDictionary dictionaryWithObject:[NSArray arrayWithObjects:@"消息提醒", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理", @"申请管理",nil] forKey:@"我的应用"]];
     [vauleKeytion addEntriesFromDictionary:[NSDictionary dictionaryWithObject:[NSArray arrayWithObjects:@"禁毒相关", @"禁毒法规",nil] forKey:@"禁毒支援"]];
@@ -52,15 +78,18 @@
                            @"数据管理":  @[@"管控信息", @"统计表格", @"重点查控" ,@"病残统计", @"出所概况"]};
      */
     
-    NSDictionary *cycleScrollDataDic = @{
-                                         @"imageArray": @[@"http://www.nncc626.com/2018-06/06/c_129887579.htm",@"http://toupiao.www.gov.cn/100dudian/index.htm",@"http://www.nncc626.com/2018-05/10/c_129869171.htm",@"http://www.nncc626.com/2018-05/23/c_129879005.htm",@"http://www.nncc626.com/2018-05/30/c_129882973.htm"],
-                                         @"titleArray": @[@"第二届中新禁毒合作双边会议在京举行",@"群众办事百项堵点疏解行动",@"第二届中菲禁毒合作双边会在杭州举行",@"大湄公河次区域禁毒合作谅解备忘录签约国会议召开",@"赵克志：坚决打赢新时代禁毒人民战争"],
-                                         @"sliderUrlArray": @[@"http://www.nncc626.com/2018-06/06/c_129887579.htm",@"http://toupiao.www.gov.cn/100dudian/index.htm",@"http://www.nncc626.com/2018-05/10/c_129869171.htm",@"http://www.nncc626.com/2018-05/23/c_129879005.htm",@"http://www.nncc626.com/2018-05/30/c_129882973.htm"]};
-    _newMainCollectionView.sliderDataDic = cycleScrollDataDic;
-    _newMainCollectionView.dataDic = [vauleKeytion copy];
-    [_newMainCollectionView reloadData];
-//    _newMainTabelView.dataDic = [vauleKeytion copy];
-//    [_newMainTabelView reloadData];
+    _newMainTabelView.dataDic = [vauleKeytion copy];
+    [_newMainTabelView reloadData];
+}
+- (void)setUpU3{
+    self.heights = iPhoneX? 120:49;
+    //FIXME:适配iPhone X2018/07/24 将64改为NAVIGATION_BAR_HEIGHT
+    _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - NAVIGATION_BAR_HEIGHT -self.heights - ScreenWidth) delegate:self placeholderImage: [UIImage imageNamed:@"placeholder"]];
+    _cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
+    
+    _newMainCollectionView = [[NewMainCollectionView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - TAB_BAR_HEIGHT)];
+    [self.view addSubview:_newMainCollectionView];
+    
 }
 - (void)setUpUI{
     self.heights = iPhoneX? 120:49;
@@ -68,14 +97,11 @@
     _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - NAVIGATION_BAR_HEIGHT -self.heights - ScreenWidth) delegate:self placeholderImage: [UIImage imageNamed:@"placeholder"]];
     _cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
     
-//    _newMainTabelView = [[NewMainTableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - TAB_BAR_HEIGHT) style:UITableViewStylePlain];
-//    _newMainTabelView.theNewMainDelegate = self;
-//    [self.view addSubview:_newMainTabelView];
-//    _newMainTabelView.tableHeaderView = _cycleScrollView;
-//    _newMainTabelView.tableFooterView = [[UIView alloc] init];
-    
-    _newMainCollectionView = [[NewMainCollectionView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - TAB_BAR_HEIGHT)];
-    [self.view addSubview:_newMainCollectionView];
+    _newMainTabelView = [[NewMainTableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - TAB_BAR_HEIGHT) style:UITableViewStylePlain];
+    _newMainTabelView.theNewMainDelegate = self;
+    [self.view addSubview:_newMainTabelView];
+    _newMainTabelView.tableHeaderView = _cycleScrollView;
+    _newMainTabelView.tableFooterView = [[UIView alloc] init];
     
 }
 - (void)demo{

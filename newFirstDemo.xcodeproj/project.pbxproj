@@ -15,7 +15,6 @@
 		DD1868202113E28B00D88DC9 /* NewMainSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1868172113E28B00D88DC9 /* NewMainSectionHeaderView.m */; };
 		DD1868212113E28B00D88DC9 /* NewMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1868192113E28B00D88DC9 /* NewMainTableView.m */; };
 		DD1868222113E28B00D88DC9 /* SetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD18681B2113E28B00D88DC9 /* SetCollectionViewCell.m */; };
-		DD18682B2113E6F000D88DC9 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DD18682A2113E6F000D88DC9 /* UIViewExt.m */; };
 		DD18682E2113E71300D88DC9 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = DD18682C2113E71300D88DC9 /* UIColor+Hex.m */; };
 		DD18683F2113E7A800D88DC9 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1868322113E7A800D88DC9 /* TAAbstractDotView.m */; };
 		DD1868402113E7A800D88DC9 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1868342113E7A800D88DC9 /* TAAnimatedDotView.m */; };
@@ -30,6 +29,7 @@
 		DD2DC4F42108545E00A0A6EE /* u.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2DC4F32108545E00A0A6EE /* u.m */; };
 		DD78C7AA21183EB10042098F /* NewMainCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD78C7A921183EB00042098F /* NewMainCollectionView.m */; };
 		DD78C7AD211931BE0042098F /* NewMainHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD78C7AC211931BE0042098F /* NewMainHeaderCollectionViewCell.m */; };
+		DD78C7B121196B0B0042098F /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DD78C7B021196B0A0042098F /* UIViewExt.m */; };
 		DD9BA03820FC59EF00D4104B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9BA03720FC59EF00D4104B /* AppDelegate.m */; };
 		DD9BA03B20FC59EF00D4104B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9BA03A20FC59EF00D4104B /* ViewController.m */; };
 		DD9BA03E20FC59EF00D4104B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9BA03C20FC59EF00D4104B /* Main.storyboard */; };
@@ -57,8 +57,6 @@
 		DD18681B2113E28B00D88DC9 /* SetCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCollectionViewCell.m; sourceTree = "<group>"; };
 		DD1868232113E2D900D88DC9 /* newFirstDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = newFirstDemo.pch; sourceTree = "<group>"; };
 		DD1868252113E38C00D88DC9 /* MyUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyUIKit.h; sourceTree = "<group>"; };
-		DD1868292113E6F000D88DC9 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIViewExt.h; path = "../../../../GZP/广州禁毒/WarmHomeGZ/MyKit/Tools/UIViewExt.h"; sourceTree = "<group>"; };
-		DD18682A2113E6F000D88DC9 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIViewExt.m; path = "../../../../GZP/广州禁毒/WarmHomeGZ/MyKit/Tools/UIViewExt.m"; sourceTree = "<group>"; };
 		DD18682C2113E71300D88DC9 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		DD18682D2113E71300D88DC9 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		DD1868312113E7A800D88DC9 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
@@ -87,6 +85,8 @@
 		DD78C7A921183EB00042098F /* NewMainCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMainCollectionView.m; sourceTree = "<group>"; };
 		DD78C7AB211931BE0042098F /* NewMainHeaderCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewMainHeaderCollectionViewCell.h; sourceTree = "<group>"; };
 		DD78C7AC211931BE0042098F /* NewMainHeaderCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewMainHeaderCollectionViewCell.m; sourceTree = "<group>"; };
+		DD78C7AF21196B0A0042098F /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIViewExt.h; path = "../../../GZP/广州禁毒/WarmHomeGZ/MyKit/Tools/UIViewExt.h"; sourceTree = "<group>"; };
+		DD78C7B021196B0A0042098F /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIViewExt.m; path = "../../../GZP/广州禁毒/WarmHomeGZ/MyKit/Tools/UIViewExt.m"; sourceTree = "<group>"; };
 		DD9BA03320FC59EF00D4104B /* newFirstDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newFirstDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9BA03620FC59EF00D4104B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DD9BA03720FC59EF00D4104B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -157,13 +157,13 @@
 			children = (
 				DD18682D2113E71300D88DC9 /* UIColor+Hex.h */,
 				DD18682C2113E71300D88DC9 /* UIColor+Hex.m */,
-				DD1868292113E6F000D88DC9 /* UIViewExt.h */,
-				DD18682A2113E6F000D88DC9 /* UIViewExt.m */,
 				DD1868252113E38C00D88DC9 /* MyUIKit.h */,
 				DD18684D2113FEEC00D88DC9 /* NSArray+Extension.h */,
 				DD18684E2113FEEC00D88DC9 /* NSArray+Extension.m */,
 				DD1868502113FF1500D88DC9 /* NSDictionary+Extension.h */,
 				DD1868512113FF1500D88DC9 /* NSDictionary+Extension.m */,
+				DD78C7AF21196B0A0042098F /* UIViewExt.h */,
+				DD78C7B021196B0A0042098F /* UIViewExt.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -350,12 +350,12 @@
 				DD9BA03820FC59EF00D4104B /* AppDelegate.m in Sources */,
 				DD1868402113E7A800D88DC9 /* TAAnimatedDotView.m in Sources */,
 				DD2DC4F42108545E00A0A6EE /* u.m in Sources */,
-				DD18682B2113E6F000D88DC9 /* UIViewExt.m in Sources */,
 				DD1868422113E7A800D88DC9 /* TAPageControl.m in Sources */,
 				DD18681E2113E28B00D88DC9 /* LayoutHeadView.m in Sources */,
 				DD18681F2113E28B00D88DC9 /* NewMainCell.m in Sources */,
 				DD1868412113E7A800D88DC9 /* TADotView.m in Sources */,
 				DD1868212113E28B00D88DC9 /* NewMainTableView.m in Sources */,
+				DD78C7B121196B0B0042098F /* UIViewExt.m in Sources */,
 				DD18682E2113E71300D88DC9 /* UIColor+Hex.m in Sources */,
 				DD1868432113E7A800D88DC9 /* SDCollectionViewCell.m in Sources */,
 			);

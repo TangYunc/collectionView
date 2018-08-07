@@ -44,9 +44,9 @@
     
     static NSString *identifier = @"CellId";
     NewMainCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (cell == nil) {
+//    if (cell == nil) {
         cell = [[NewMainCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-    }
+//    }
     cell.delegate = self;
     NSArray *arr = [FilterConditionModel getNeedSignStrFrom:self.dataDic isGetKey:NO];
     cell.dataArr = arr[indexPath.section];
